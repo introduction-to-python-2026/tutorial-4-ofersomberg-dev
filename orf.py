@@ -14,7 +14,13 @@ def find_first_in_register_stop(dna):
 
 
 def all_orfs_range(dna):
-    pass # Replace the `pass` with your code
+    starts = find_all_starts(dna)
+    orfs_ranges = []
+    for start in starts:
+        end = find_first_in_register_stop(dna[start:])
+        if end != -1:
+            orfs_ranges.append((start, start+end))
+    return orfs_ranges
 
 
 def longest_orf(dna):
