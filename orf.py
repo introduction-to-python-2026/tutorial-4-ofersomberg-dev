@@ -24,7 +24,12 @@ def all_orfs_range(dna):
 
 
 def longest_orf(dna):
-    pass # Replace the `pass` with your code
+    longest = ""
+    for orf_range in all_orfs_range(dna.upper()):
+        orf = dna[orf_range[0]: orf_range[1]]
+        if len(orf) > len(longest):
+            longest = orf
+    return longest
 
 
 
