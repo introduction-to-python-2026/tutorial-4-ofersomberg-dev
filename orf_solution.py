@@ -1,6 +1,6 @@
 def find_all_starts(dna):
     starts = []
-    for i in range(len(dna) -2):
+    for i in range(len(dna)):
         if dna[i: i+3] == "ATG":
             starts.append(i)
     return starts
