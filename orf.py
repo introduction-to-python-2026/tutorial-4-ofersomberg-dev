@@ -3,7 +3,10 @@ def find_all_starts(dna):
 
 
 def find_first_in_register_stop(dna):
-    pass # Replace the `pass` with your code
+    for i in range(0, len(dna), 3):
+        if dna[i:i+3] in ["TGA", "TAG", "TAA"]:
+            return i+3
+    return -1
 
 
 def all_orfs_range(dna):
