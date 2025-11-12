@@ -1,5 +1,9 @@
 def find_all_starts(dna):
-    pass # Replace the `pass` with your code
+    starts = []
+    for i in range(len(dna)):
+        if dna[i: i+3] == "ATG":
+            starts.append(i)
+    return starts
 
 
 def find_first_in_register_stop(dna):
